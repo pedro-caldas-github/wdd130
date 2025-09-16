@@ -31,6 +31,7 @@ footer{
 nav {
     background-color: white;
     padding: 0;
+    display: block;
 }
 
 h1 {
@@ -38,10 +39,15 @@ h1 {
 }
 
 img{
-    width: 150px;
+    width: 200px;
     height: auto;
     border: 1px;
     padding: 1px;
-    box-shadow: white;
+    box-shadow: black;
+}
+
+main rule{
+    max-width: fit-content;
 
 }
+
