@@ -9,6 +9,8 @@
   --image-width-medium: 200px;
   --image-width-small: 150px;
   --box-shadow: 2px 2px 5px var(--main-color);
+  --main-font: "Arial", serif;
+
 }
 
 aside {
@@ -19,6 +21,7 @@ aside {
   background-color: #eee;
   color: var(--secondary-color);
   text-align: center;
+  font-family: var(--main-font);
 }
 
 aside img {
@@ -33,12 +36,14 @@ main img {
 
 p {
   padding: 0;
+  font-family: var(--main-font);
 }
 
 footer {
   margin-top: var(--spacing-medium);
   border-top: var(--border-radius) solid var(--main-color);
   text-align: center;
+  font-family: var(--main-font);
 }
 
 nav {
@@ -66,4 +71,25 @@ img {
 
 main {
   max-width: fit-content;
+  font-family: var(--main-font);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: var(--main-font);
+}
+
+/* Class Selectors */
+
+.box {
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 10%);
+  padding: 1rem;
+  background-color: #ddd;
+  color: #000;
 }
