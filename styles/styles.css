@@ -10,11 +10,83 @@
   --image-width-small: 150px;
   --box-shadow: 2px 2px 5px var(--main-color);
   --main-font: "Arial", serif;
-
 }
 
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+/* Centralização e Largura (header, .grid e footer) */
+header,
+.grid, 
+footer {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+/* Estilo do Footer */
+footer {
+  margin-top: var(--spacing-medium);
+  border-top: var(--border-radius) solid var(--main-color);
+  text-align: center;
+  font-family: var(--main-font);
+}
+
+/* Navegação (Flexbox) */
+nav {
+  background-color: var(--light-gray);
+  padding: var(--spacing-small);
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: center; 
+}
+
+nav a {
+  display: block; 
+  padding: var(--border-radius);
+  text-decoration: none; 
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Tipografia */
+h1 {
+  color: var(--main-color);
+  border-bottom: 2px solid black; 
+}
+
+p {
+  padding: 0;
+  font-family: var(--main-font);
+}
+
+/* Configuração do Grid (2 linhas e 2 colunas) */
+.grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: auto auto; 
+  gap: var(--spacing-large); 
+}
+
+main {
+  font-family: var(--main-font);
+  grid-column: 2/3; 
+  grid-row: 1/2;
+  margin: 1rem;
+}
+
+/* Sidebar (Principal - Recife) */
 aside {
-  width: 300px;
+  width: 20rem; 
   margin: var(--spacing-large);
   border: var(--border-radius) solid rgba(0, 0, 0, 0.2);
   padding: var(--spacing-large);
@@ -22,6 +94,31 @@ aside {
   color: var(--secondary-color);
   text-align: center;
   font-family: var(--main-font);
+
+  /* Posição no Grid: Coluna 1, Linha 1 */
+  position: relative;
+  grid-column: 1/2; 
+  grid-row: 1/2; 
+  
+}
+
+/* NOVO: Estilo para a caixa de links dentro do main */
+.link-box {
+    padding: var(--spacing-large);
+    background-color: #eee;
+    color: var(--secondary-color);
+    border: var(--border-radius) solid rgba(0, 0, 0, 0.2);
+    margin-top: var(--spacing-medium); /* Adiciona um pequeno espaço acima da caixa */
+    /* Remove text-align: center para manter os links à esquerda */
+}
+
+/* Imagens */
+img {
+  width: var(--image-width-medium);
+  height: auto;
+  border: var(--border-radius) solid var(--main-color);
+  padding: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 aside img {
@@ -34,58 +131,7 @@ main img {
   height: auto;
 }
 
-p {
-  padding: 0;
-  font-family: var(--main-font);
-}
-
-footer {
-  margin-top: var(--spacing-medium);
-  border-top: var(--border-radius) solid var(--main-color);
-  text-align: center;
-  font-family: var(--main-font);
-}
-
-nav {
-  background-color: var(--light-gray);
-  padding: var(--spacing-small);
-}
-
-nav a {
-  color: var(--main-color);
-  padding: var(--border-radius);
-  display: block;
-}
-
-h1 {
-  color: var(--main-color);
-}
-
-img {
-  width: var(--image-width-medium);
-  height: auto;
-  border: var(--border-radius) solid var(--main-color);
-  padding: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
-
-main {
-  max-width: fit-content;
-  font-family: var(--main-font);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-    font-family: var(--main-font);
-}
-
-/* Class Selectors */
-
+/* Seletores de Classe */
 .box {
   margin: 1rem;
   border: 1px solid rgb(0 0 0 / 10%);
